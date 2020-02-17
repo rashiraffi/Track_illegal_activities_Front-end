@@ -41,9 +41,9 @@ while True:
         #if prediction is 1, which means smoking.
         font = cv2.FONT_HERSHEY_SIMPLEX
         frame = cv2.putText(frame, str(time.strftime('%Y-%m-%d %H-%M-%S')), (5, 100 ), font, 1, (255, 255, 255), 2)
-        if prediction == 1:
+        if prediction == 0:
                 frame = cv2.putText(frame, "Not Smoking", (5, 150 ), font, 1, (0, 255, 0), 2)
-        elif prediction == 0:
+        elif prediction == 1:
                 frame = cv2.putText(frame, "Smoking", (5, 150 ), font, 1, (0, 0, 255), 3)
                 t=str(time.strftime('%Y-%m-%d %H-%M-%S'))
                 n_m=int(t[14:16])

@@ -1,7 +1,7 @@
 <?php
     include('PHP/config.php');
     $records=mysqli_query($conn,"SELECT * from Smk_Record");
-
+    header("Refresh: 10;");
 ?>
 <!DOCTYPE html>
 <html>
