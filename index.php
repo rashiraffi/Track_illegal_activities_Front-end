@@ -1,7 +1,7 @@
 <?php
     include('PHP/config.php');
     $records=mysqli_query($conn,"SELECT * from Smk_Record order by id desc");
-    #header("Refresh: 2;");
+    header("Refresh: 3;");
 ?>
 <!DOCTYPE html>
 <html>
