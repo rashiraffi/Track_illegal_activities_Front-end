@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 29, 2020 at 10:34 PM
+-- Generation Time: Feb 29, 2020 at 11:06 PM
 -- Server version: 5.7.29-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.3
 
@@ -47,7 +47,14 @@ INSERT INTO `Smk_Record` (`id`, `name`, `loc`, `percentage`, `datetime`) VALUES
 (67, 'smoking2020-02-19 20-44-50.jpg', 'Bus_Stand_02', 72, '2020-02-29 22:31:54'),
 (68, 'smoking2020-02-2006-35-14.jpg\r\n', 'Hall_01', 58, '2020-02-29 22:31:54'),
 (69, 'smoking2020-02-2006-35-24.jpg', 'Railway_Station_09', 56, '2020-02-29 22:31:54'),
-(70, 'smoking2020-02-2006-34-20.jpg', 'Railway_Station_08', 50, '2020-02-29 22:31:54');
+(70, 'smoking2020-02-2006-34-20.jpg', 'Railway_Station_08', 50, '2020-02-29 22:31:54'),
+(71, 'smoking2020-02-2922-57-21.jpg', '9.9399,76.2602', 50, '2020-02-29 22:57:21'),
+(72, 'smoking2020-02-2922-58-03.jpg', '9.9399,76.2602', 58, '2020-02-29 22:58:03'),
+(73, 'smoking2020-02-2922-58-13.jpg', '9.9399,76.2602', 52, '2020-02-29 22:58:13'),
+(74, 'smoking2020-02-2922-58-24.jpg', '9.9399,76.2602', 61, '2020-02-29 22:58:24'),
+(75, 'smoking2020-02-2922-59-04.jpg', '9.9399,76.2602', 52, '2020-02-29 22:59:04'),
+(76, 'smoking2020-02-2922-59-28.jpg', '9.9399,76.2602', 54, '2020-02-29 22:59:28'),
+(77, 'smoking2020-02-2922-59-39.jpg', '9.9399,76.2602', 53, '2020-02-29 22:59:39');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +75,7 @@ ALTER TABLE `Smk_Record`
 -- AUTO_INCREMENT for table `Smk_Record`
 --
 ALTER TABLE `Smk_Record`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

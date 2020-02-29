@@ -17,7 +17,7 @@ img_array=[]
 #Load the saved model
 model = tf.keras.models.load_model('model .h5')
 #video = cv2.VideoCapture('1.mp4')
-video = cv2.VideoCapture(input("Enter Video path"))
+video = cv2.VideoCapture(input("Enter Video name"))
 if (video.isOpened()== False): 
         print("Error opening video file")
 image_path = '/var/www/html/Illegal/images'
