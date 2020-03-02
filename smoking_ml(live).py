@@ -5,11 +5,7 @@ from keras import models
 import tensorflow as tf
 import time
 import os
-<<<<<<< HEAD
-
-=======
 import geocoder
->>>>>>> 5c0173c45e6bd7fa393d4bacf3e4b525ad498cb8
 #Mysql Connection.
 import mysql.connector
 db = mysql.connector.connect(host="localhost",user="root",passwd="0000", database="smk")
@@ -21,10 +17,7 @@ s=-10
 #Load the saved model
 model = tf.keras.models.load_model('model .h5')
 video = cv2.VideoCapture(0)
-<<<<<<< HEAD
-=======
 image_path = '/var/www/html/Illegal/images'
->>>>>>> 5c0173c45e6bd7fa393d4bacf3e4b525ad498cb8
 while True:
         _, frame = video.read()
 
@@ -41,7 +34,6 @@ while True:
         #Our keras model used a 4D tensor, (images x height x width x channel)
         #So changing dimension 128x128x3 into 1x128x128x3 
         img_array = np.expand_dims(img_array, axis=0)
-<<<<<<< HEAD
 
         #Calling the predict method on model to predict 'me' on the image
         prediction = int(model.predict(img_array)[0][0])
@@ -54,7 +46,6 @@ while True:
                 frame = cv2.putText(frame, "Not Smoking", (5, 150 ), font, 1, (0, 255, 0), 2)
         elif prediction == 1:
                 frame = cv2.putText(frame, "Smoking", (5, 150 ), font, 1, (0, 0, 255), 3)
-=======
         #Calling the predict method on model to predict 'me' on the image
         prediction = model.predict(img_array)[0][0]
         #print(prediction)
@@ -67,12 +58,10 @@ while True:
                 frame = cv2.putText(frame, "Not Smoking", (5, 150 ), font, 1, (0, 255, 0), 2)
         elif int(prediction) == 1:
                 frame = cv2.putText(frame, "Smoking "+str(int(per))+"%", (5, 150 ), font, 1, (0, 0, 255), 3)
->>>>>>> 5c0173c45e6bd7fa393d4bacf3e4b525ad498cb8
                 t=str(time.strftime('%Y-%m-%d %H-%M-%S'))
                 n_m=int(t[14:16])
                 n_s=int(t[17:19])
                 if(abs(m-n_m)>0 or abs(s-n_s)>10):
-<<<<<<< HEAD
                         m=n_m
                         s=n_s
                         f_name='smoking'+str(time.strftime('%Y-%m-%d %H-%M-%S'))+'.jpg'
@@ -82,7 +71,6 @@ while True:
                         cursor.execute(sql, val)
                         db.commit()
                         cv2.imwrite(f_name,frame)
-=======
                         g = geocoder.ip("me")
                         l=str(g.latlng[0])+","+str(g.latlng[1])
                         m=n_m
@@ -94,7 +82,6 @@ while True:
                         cursor.execute(sql, val)
                         db.commit()
                         cv2.imwrite(os.path.join(image_path,f_name),frame)
->>>>>>> 5c0173c45e6bd7fa393d4bacf3e4b525ad498cb8
         cv2.imshow("Capturing", frame)
         key=cv2.waitKey(1)
         if key == ord('q'):
